@@ -4,38 +4,6 @@ from matplotlib.colors import ListedColormap
 from typing import Literal
 
 
-# dolar = rq.get(
-#     url='https://ve.dolarapi.com/v1/historicos/dolares/oficial'
-# )
-
-# historico = dolar.json()
-
-# prom = []
-
-
-# for i in range(len(historico)):
-    
-#     prom2 = []
-#     for j,n in enumerate(['fuente','promedio','fecha']):
-
-#         prom2.append(historico[i][n])
-
-#     prom.append(prom2)
-
-# x2 = []
-# y2 = []
-# z2 = []
-
-# dia = 0
-# for i in range(len(historico)//2, len(historico)):
-
-
-#     dia += 1
-#     x2.append(dia)
-#     z2.append(int(prom[i][2][-2:]))
-#     y2.append(np.log(prom[i][1]))
-
-# data = np.column_stack((x2,z2,y2))
 
 class Modelo_base():
 
@@ -2183,10 +2151,8 @@ def strat_val(modelo: Modelo_base, datos: list[list], transform_class, medida: L
 
             continue
 
-        print('prediciendo')
         # SI NO FUNCIONA ES PORQUE F_HAT NO ESTA VECTORIZADA
         preds = transform_class(modelo.f_hat(datos_test[:, :-1]))
-        print('terminado')
             
 
         for i,p in enumerate(preds):
