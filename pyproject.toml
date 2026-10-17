@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "models_pya"           # El nombre con el que lo instalarás en pip
+version = "0.1.0"
+description = "Modelos de machine learning y validacion cruzada (con bugs)"
+readme = "README.md"
+authors = [
+    { name = "jdv", email = "josuenoguera3@gmail.com" }
+]
+dependencies = [              # Si tu paquete necesita otras librerías, ponlas aquí
+    "numpy>=1.20.0",
+    "matplotlib>=3.10.8",
+    "typing_extensions>=4.15.0",
+]
